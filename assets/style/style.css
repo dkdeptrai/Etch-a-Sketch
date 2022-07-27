@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+.choose-size {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4px auto;
+    width: 200px;
+    height: auto;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:60%;
+    height: auto;
+    aspect-ratio: 1;
+    border: 2px solid black;
+}
+
+.title {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1;
+    opacity: 0;
+    background-color: white;
+}
+
+.colored {
+    background-color: black;
+}
