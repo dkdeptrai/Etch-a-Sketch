@@ -1,19 +1,23 @@
 const container = document.querySelector('.container');
 let titles = Array.from(container.childNodes);
+
+function changeColor(e) {
+    if (e.type != 'mouseover') return;
+    else {
+        e.target.classList.add('colored');
+        e.target.style.opacity -= '-0.1';
+    }
+}
+
 function createGrid (size) {
     for (let i = 0; i < size; i++) {
         let title = document.createElement('div');
         title.style.width = `${100/Math.sqrt(size)}%`;
+        title.setAttribute('draggable', 'false');
         title.classList.add('title');
+        title.addEventListener('mousedown', changeColor);
         container.appendChild(title);
     }
-    let titles = Array.from(container.childNodes);
-    titles.forEach(title => {
-        title.addEventListener('mouseover', () => {
-            title.classList.add('colored');
-            title.style.opacity -= '-0.1' ;
-       }) 
-    });
 }
 
 let size = 1;
